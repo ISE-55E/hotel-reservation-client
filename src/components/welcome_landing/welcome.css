@@ -2,5 +2,5 @@
     color: red;
     width: 100%;
     height: 700px;
-    /*background: url("");*/
+    background: url("/public/images/home.jpg") no-repeat center / cover;
 }

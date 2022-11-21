@@ -1,11 +1,12 @@
 import {Component} from "react";
-import {Link} from "react-router-dom";
 import './welcome.css';
+import {Image} from "react-bootstrap";
 
 export default class Welcome extends Component{
     render() {
         return (
             <div className="welcome">
+
 
             </div>
         );
