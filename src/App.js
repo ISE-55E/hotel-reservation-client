@@ -7,6 +7,7 @@ import Rooms from "./components/rooms/rooms";
 import AboutUs from "./components/about_us/aboutUs";
 import Service from "./components/service/service";
 import Events from "./components/events/events";
+import PrivateArea from "./components/private_area/privateArea";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
             <Route path='/about-us' element={<AboutUs />} />
             <Route path='/service' element={<Service />} />
             <Route path='/event' element={<Events />} />
-            <Route path='/client' element={<Events />} />
+            <Route path='/client' element={<PrivateArea  />} />
           </Routes>
       </div>
   );

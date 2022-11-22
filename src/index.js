@@ -5,6 +5,8 @@ import App from './App';
 import {BrowserRouter} from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
 
+const server = 'https://hotel-reservation-backend.herokuapp.com/';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Auth0Provider
@@ -17,4 +19,6 @@ root.render(
         </BrowserRouter>
     </Auth0Provider>,
 );
+
+export default server;
 
