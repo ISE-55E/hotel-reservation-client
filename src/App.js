@@ -9,8 +9,10 @@ import Service from "./components/service/service";
 import Events from "./components/events/events";
 import PrivateArea from "./components/private_area/privateArea";
 
+
 function App() {
   return (
+
       <div>
           <Routes>
             <Route path='/' element={<Landing />} />
