@@ -17,7 +17,7 @@ export default class Welcome extends Component{
                                 <Nav.Link href="#home">Home</Nav.Link>
                                 <Nav.Link href="#link">Rooms</Nav.Link>
                                 <Nav.Link href="#link">Gallery</Nav.Link>
-                                <Nav.Link href="#link"><img src="src/components/welcome_landing/images/Logo.png" alt=".png"/></Nav.Link>
+                                <Nav.Link href="#link"><img src="public/images/Logo.png" alt=".png"/></Nav.Link>
                                 <Nav.Link href="#link">About us</Nav.Link>
                                 <Nav.Link href="#link">Contact</Nav.Link>
                             </Nav>
