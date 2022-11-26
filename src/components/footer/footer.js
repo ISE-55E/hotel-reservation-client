@@ -2,6 +2,8 @@ import {Component} from "react";
 import './footer.css';
 import {Button, Col, Container, Form, Nav, Navbar, Row} from "react-bootstrap";
 import * as PropTypes from "prop-types";
+import {faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
 function FontAwesomeIcon(props) {
@@ -12,14 +14,7 @@ FontAwesomeIcon.propTypes = {icon: PropTypes.string};
 export default class Footer extends Component {
     render() {
         return (
-        //     <Navbar.Brand href="#home">Pages</Navbar.Brand>
-        // <Nav className="me-auto flex-column align-items-lg-start">
-        //     <Nav.Link href="#home">Home</Nav.Link>
-        //     <Nav.Link href="#aboutus">About Us</Nav.Link>
-        //     <Nav.Link href="#gallery">Gallery</Nav.Link>
-        //     <Nav.Link href="#gallery">Contacts</Nav.Link>
-        //     <Nav.Link href="#gallery">Rooms</Nav.Link>
-        // </Nav>
+
             <div className="footer">
                 <Container>
                     <Row>
@@ -36,7 +31,6 @@ export default class Footer extends Component {
                             </Navbar>
                         </Col>
                         <Col>
-
                             <Navbar variant={"dark"} className={"flex-column align-items-lg-start"}>
                             <Navbar.Brand href="#home">Our Services</Navbar.Brand>
                             <Nav className="me-auto flex-column align-items-lg-start">
@@ -47,8 +41,6 @@ export default class Footer extends Component {
                                 <Nav.Link href="#gallery">Delicious</Nav.Link>
                             </Nav>
                             </Navbar>
-
-
                         </Col>
                         <Col>
                             <Navbar variant={"dark"} className={"flex-column align-items-lg-start"}>
@@ -71,12 +63,9 @@ export default class Footer extends Component {
                                     <Button variant="dark">Subscribe</Button>
                                 </Form>
                             </Navbar>
-                                <FontAwesomeIcon icon="fa-brands fa-instagram" />
-
-
-
+                            < FontAwesomeIcon icon={faFacebook}>dsfedf</>
+                        {/*  !!!  there is Icons, but they are not working -need solving-  !!! */}
                         </Col>
-
                     </Row>
                 </Container>
             </div>
