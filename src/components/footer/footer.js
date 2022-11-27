@@ -1,16 +1,9 @@
 import {Component} from "react";
 import './footer.css';
 import {Button, Col, Container, Form, Nav, Navbar, Row} from "react-bootstrap";
-import * as PropTypes from "prop-types";
-import {faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-function FontAwesomeIcon(props) {
-    return null;
-}
 
-FontAwesomeIcon.propTypes = {icon: PropTypes.string};
 export default class Footer extends Component {
     render() {
         return (
@@ -63,7 +56,7 @@ export default class Footer extends Component {
                                     <Button variant="dark">Subscribe</Button>
                                 </Form>
                             </Navbar>
-                            < FontAwesomeIcon icon={faFacebook}>dsfedf</>
+
                         {/*  !!!  there is Icons, but they are not working -need solving-  !!! */}
                         </Col>
                     </Row>

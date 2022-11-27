@@ -93,6 +93,7 @@ export default class Welcome extends Component{
                         <p>Take a rest in Amathings</p>
                         <p>the perfect place & services & national food & comfort prices</p>
                     </div>
+                    <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
             </Container>
         );
 
