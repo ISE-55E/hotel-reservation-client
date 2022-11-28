@@ -1,7 +1,7 @@
 import {Component} from "react";
-import './welcome.css';
 import {Button, Col, Container, Form, Nav, Navbar, NavDropdown, Row} from "react-bootstrap";
 import AuthenticationModal from "./authenticationModal";
+import './welcome.css';
 
 
 export default class Welcome extends Component{
@@ -55,7 +55,6 @@ export default class Welcome extends Component{
                     <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
             </Container>
         );
-
     }
 }
 
