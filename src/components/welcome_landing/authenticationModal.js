@@ -17,7 +17,7 @@ class AuthenticationModal extends Component {
                 <Modal.Body className={"ModalWin"}>
                     <Row>
                         <Col sm={12} lg={6}>
-                            <Form className={"p-5"}>
+                            <Form className={"p-3"}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control type="email" placeholder="Enter email" />
@@ -38,12 +38,13 @@ class AuthenticationModal extends Component {
                                 </Button>
                             </Form>
                         </Col>
-                        <Col lg={6}>
-
+                        <Col className={"RegImgPar"} lg={6} >
+                            <img className={"RegImg"} src="/images/RegistrationPart.png" alt=".png" />
                         </Col>
                     </Row>
 
                 </Modal.Body>
+
             </Modal>
 
         );
