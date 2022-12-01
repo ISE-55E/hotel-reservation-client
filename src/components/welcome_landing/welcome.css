@@ -3,7 +3,10 @@
     background-color: white !important;
 
 }
-
+*{
+    margin: 0;
+    padding: 0;
+}
 .logo {
     width: 75px;
 }
@@ -21,6 +24,9 @@
     justify-content: center;
     align-items: center;
     height: 600px;
+}
+.BtnNav{
+    width: 110px;
 }
 
 /*-----------------fonts-------------------*/
@@ -47,6 +53,7 @@
 }
 .fakafaka{
     margin: 0  auto;
+
 }
 
          /*media part-----*/
