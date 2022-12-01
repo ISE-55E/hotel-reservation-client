@@ -24,7 +24,7 @@ export default class Welcome extends Component{
                             toggle={this.toggleAuthenticationModal}
                         />
                     ) : null}
-                    <Row className="w-100 p-0">
+                    <Row className="fixed-top w-100 m-0 active_Welcome">
                         <Navbar variant={"dark"} expand="lg">
                             <Container>
                                 <Navbar.Brand href="#home">Tashkent 18*C</Navbar.Brand>
@@ -39,7 +39,7 @@ export default class Welcome extends Component{
                                         <Nav.Link href="#link">Contacts</Nav.Link>
                                         <Nav.Link href="#link">Services</Nav.Link>
                                     </Nav>
-                                    <Navbar.Brand href="#home">
+                                    <Navbar.Brand className={"BtnNav d-flex justify-content-center"} href="#home">
                                         <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
                                         <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
                                     </Navbar.Brand>
@@ -57,4 +57,15 @@ export default class Welcome extends Component{
         );
     }
 }
+
+const nav = document.querySelector('nav')
+
+window.addEventListener('Scroll', () => {
+    if (window.scrolly>=50) {
+        nav.classList.add('active_Welcome');
+    }
+    else {
+        nav.classList.remove('active_Welcome');
+    }
+})
 

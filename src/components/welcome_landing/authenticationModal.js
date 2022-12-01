@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Form, Modal} from "react-bootstrap";
+import {Button, Col, Form, Modal, Row} from "react-bootstrap";
 import "./SignInParty.css";
 
 class AuthenticationModal extends Component {
@@ -10,28 +10,19 @@ class AuthenticationModal extends Component {
             <Modal
                 show={true}
                 onHide={toggle}
-                size="xl"
+                size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
             >
-                <Modal.Body className={"p-0 RegBack d-flex justify-content-between"}>
-                    <div className={"SignIn d-flex p-0"}>
-                        <Form className={"p-5 text-light fakaferi"}>
-                            <div className={"SwitchBox mb-5"}>
-                            <Button className={"bg-dark text-light"} variant="-outline- light" >
-                                Submit
-                            </Button>{' '}
-                            <Button className={"bg-dark text-light"} variant="-outline- light" >
-                                Submit
-                            </Button>
-                            </div>
+                <Modal.Body className={"ModalWin"}>
+                    <Row>
+                        <Col sm={12} lg={6}>
+                            <Form className={"p-3"}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control type="email" placeholder="Enter email" />
-                                    <Form.Text className="text-mutedt">
-                                        <p className={"text-light"}>
-                                            We'll never share your email with anyone else.
-                                        </p>
+                                    <Form.Text className="text-muted">
+                                        We'll never share your email with anyone else.
                                     </Form.Text>
                                 </Form.Group>
 
@@ -45,10 +36,17 @@ class AuthenticationModal extends Component {
                                 <Button variant="primary" type="submit">
                                     Submit
                                 </Button>
-                        </Form>
-                    </div>
+                            </Form>
+                        </Col>
+                        <Col className={"RegImgPar"} lg={6} >
+                            <img className={"RegImg"} src="/images/RegistrationPart.png" alt=".png" />
+                        </Col>
+                    </Row>
+
                 </Modal.Body>
+
             </Modal>
+
         );
     }
 }

@@ -3,7 +3,12 @@
     background: #8A8A8A;
     backdrop-filter: blur(200px);
 }
-.RegBack img{
-    position: relative;
-    left: -10px;
+.RegImg{
+    width: 370px;
 }
+
+
+/*@media (max-width: 900px){*/
+/*    .RegImgPar{*/
+/*    }*/
+/*}*/
