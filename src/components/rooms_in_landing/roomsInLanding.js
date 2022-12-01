@@ -1,9 +1,12 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import './roomsInLanding.css';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import server from "../../index";
-import {Image} from "react-bootstrap";
+import {Button, Image} from "react-bootstrap";
+import ShowImageModal from "../rooms/showImageModal";
+import {Navigation} from "swiper";
+import {Link} from "react-router-dom";
 
 export default class RoomsInLanding extends Component {
     constructor(props) {
@@ -12,6 +15,8 @@ export default class RoomsInLanding extends Component {
             items: [],
             categoryList: [],
             typeRoomList: [],
+            showImageModal: false,
+            image: null,
             sort: {
                 category: '',
                 type_room: '',
@@ -36,6 +41,15 @@ export default class RoomsInLanding extends Component {
         this.refreshList();
         this.refreshCategoryList();
         this.refreshTypeRoomList();
+    }
+
+    toggleShowImageModal = () => {
+        this.setState({ showImageModal: !this.state.showImageModal })
+    }
+
+    openImage = (image) => {
+        this.setState({image: image})
+        this.toggleShowImageModal();
     }
 
     refreshCategoryList = () => {
@@ -94,15 +108,29 @@ export default class RoomsInLanding extends Component {
     renderItems = () => {
         const items = this.state.items;
         return items.map((item) => (
-            <SwiperSlide className="justify-content-start align-items-start bg-transparent">
-                <div className="room-image">
-                    <Image src={item.image1} />
+            <SwiperSlide className="justify-content-start align-items-start bg-transparent slide-padding">
+                <div className="room-image shadow">
+                    <Image
+                        src={item.image1}
+                        onClick={() => {this.openImage(item.image1)}}
+                    />
                 </div>
-                <div className="bg-light room-info p-2 room-info-text d-flex flex-column justify-content-start align-items-start">
-                    <h6 className="mx item-name">{item.name}</h6>
-                    <p className="mx">{this.getCategoryById(item.category)}, {this.getTypeRoomById(item.type_room)}</p>
-                    <p className="mx">{item.floor}-floor, {item.room_number}-room, {item.area} kv</p>
-
+                <div className="shadow room-info p-3 py-4 room-info-text d-flex flex-column justify-content-between">
+                    <div className="d-flex flex-column justify-content-start align-items-start">
+                        <h6 className="mx item-name">{item.name}</h6>
+                        <p className="mx">{this.getCategoryById(item.category)}, {this.getTypeRoomById(item.type_room)}</p>
+                        <p className="mx">{item.floor}-floor, {item.room_number}-room, {item.area} kv</p>
+                        <p className="mx">Single beds: {item.single_beds}, Double beds: {item.double_beds}</p>
+                        <p className="mx">
+                            x x x x x x
+                        </p>
+                        <p className="mx">Price: ${item.price}</p>
+                    </div>
+                    <Button
+                        variant="btn btn-size text-light d-flex justify-content-center align-items-center rounded-0 button-color"
+                    >
+                        Book Now
+                    </Button>
                 </div>
             </SwiperSlide>
         ))
@@ -110,15 +138,45 @@ export default class RoomsInLanding extends Component {
 
     render() {
         return (
-            <div className="roomsInLanding px-4">
+            <div className="roomsInLanding px-4 flex-column">
+                {this.state.showImageModal ? (
+                    <ShowImageModal
+                        image={this.state.image}
+                        toggle={this.toggleShowImageModal}
+                    />
+                ) : null}
                 <Swiper
+                    modules={[Navigation]}
+                    breakpoints={{
+                        1700: {
+                            spaceBetween: 80,
+                            slidesPerView: 3,
+                        },
+                        1350: {
+                            spaceBetween: 200,
+                            slidesPerView: 2,
+                        },
+                        1100: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        800: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        200: {
+                            slidesPerView: 1,
+                        }
+                    }}
                     spaceBetween={200}
                     slidesPerView={2}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
+                    navigation
                 >
                     {this.renderItems()}
                 </Swiper>
+
+                <Link to="/rooms" className="show-more-rooms">Show More</Link>
+
             </div>
         );
     }

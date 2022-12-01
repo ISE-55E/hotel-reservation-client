@@ -59,14 +59,14 @@
 }
 
 .button-color {
-    color: #523724;
-    border-color: #523724;
+    color: white !important;
+    border-color: #523724 !important;
 }
 
 .button-color:hover {
     border-color: #523724 !important;
-    background-color: #523724 !important;
-    color: white !important;
+    background-color: white !important;
+    color: #523724 !important;
 }
 
 .height-full {
