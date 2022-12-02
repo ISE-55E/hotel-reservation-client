@@ -13,11 +13,13 @@ class AuthenticationModal extends Component {
                 size="lg"
                 aria-labelledby="contained-modal-title-vcenter"
                 centered
+
+
             >
-                <Modal.Body className={"ModalWin"}>
+                <Modal.Body className={"p-0"}>
                     <Row>
                         <Col sm={12} lg={6}>
-                            <Form className={"p-3"}>
+                            <Form className={"p-0 m-4"}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control type="email" placeholder="Enter email" />
@@ -44,7 +46,6 @@ class AuthenticationModal extends Component {
                     </Row>
 
                 </Modal.Body>
-
             </Modal>
 
         );

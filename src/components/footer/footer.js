@@ -22,7 +22,7 @@ export default class Footer extends Component {
                                       <Nav className="me-auto flex-column align-items-lg-start">
                                           <Nav.Link href="#home">home</Nav.Link>
                                           <Nav.Link href="#aboutus">About Us</Nav.Link>
-                                          <Nav.Link href="#gallery">Gallers</Nav.Link>
+                                          <Nav.Link href="#gallery">Gallery</Nav.Link>
                                           <Nav.Link href="#gallery">Parties</Nav.Link>
                                           <Nav.Link href="#gallery">Delicious</Nav.Link>
                                       </Nav>
@@ -41,8 +41,8 @@ export default class Footer extends Component {
                               </Navbar>
                           </Col>
                           <Col lg={4}  md={12} sm={12} >
-                              <h5>Subscripe</h5>
-                              <p>subscrie to our channels to know our new events and comfort price</p>
+                              <h5>Subscribe</h5>
+                              <p>subscribe to our channels to know our new events and comfort price</p>
                               <Form className="d-flex bg-light p-1 rounded-2 subscribe">
                                   <Form.Control
                                       type="search"
