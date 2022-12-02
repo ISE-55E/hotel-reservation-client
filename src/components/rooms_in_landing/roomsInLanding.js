@@ -1,7 +1,11 @@
 import React, {Component} from "react";
 import './roomsInLanding.css';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Virtual } from 'swiper';
 import 'swiper/css';
+import 'swiper/css/virtual';
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
 import server from "../../index";
 import {Button, Image} from "react-bootstrap";
 import ShowImageModal from "../rooms/showImageModal";
@@ -107,8 +111,9 @@ export default class RoomsInLanding extends Component {
 
     renderItems = () => {
         const items = this.state.items;
-        return items.map((item) => (
-            <SwiperSlide className="justify-content-start align-items-start bg-transparent slide-padding">
+
+        return items.map((item, index) => (
+            <SwiperSlide virtualIndex={index} key={item.id} className="justify-content-start align-items-start bg-transparent slide-padding">
                 <div className="room-image shadow">
                     <Image
                         src={item.image1}
@@ -137,6 +142,18 @@ export default class RoomsInLanding extends Component {
     }
 
     render() {
+        const params = {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            runCallbacksOnInit: true,
+            onInit: (swiper) => {
+                this.swiper = swiper
+            }
+        };
+
         return (
             <div className="roomsInLanding px-4 flex-column">
                 {this.state.showImageModal ? (
@@ -146,7 +163,8 @@ export default class RoomsInLanding extends Component {
                     />
                 ) : null}
                 <Swiper
-                    modules={[Navigation]}
+                    virtual
+                    modules={[Navigation, Virtual]}
                     breakpoints={{
                         1700: {
                             spaceBetween: 80,
@@ -171,6 +189,8 @@ export default class RoomsInLanding extends Component {
                     spaceBetween={200}
                     slidesPerView={2}
                     navigation
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
                 >
                     {this.renderItems()}
                 </Swiper>
