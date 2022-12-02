@@ -8,6 +8,7 @@
     align-items: center;
     position: relative;
     padding-top: 100px;
+    font-family: 'Cormorant Garamond', serif;
 }
 
 .swiper {
@@ -43,9 +44,9 @@
 }
 
 .under-slide {
-    width: 60%;
+    width: 80%;
     height: 250px;
     background-color: silver;
     position: absolute;
-    bottom: 60px;
+    bottom: 10px;
 }

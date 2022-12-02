@@ -142,18 +142,6 @@ export default class RoomsInLanding extends Component {
     }
 
     render() {
-        const params = {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            spaceBetween: 30,
-            runCallbacksOnInit: true,
-            onInit: (swiper) => {
-                this.swiper = swiper
-            }
-        };
-
         return (
             <div className="roomsInLanding px-4 flex-column">
                 {this.state.showImageModal ? (
