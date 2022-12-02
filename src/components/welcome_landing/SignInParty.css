@@ -6,6 +6,9 @@
 .RegImg{
     width: 370px;
 }
+.ModalBody{
+    padding: 0!important;
+}
 
 
 /*@media (max-width: 900px){*/

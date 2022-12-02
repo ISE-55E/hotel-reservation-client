@@ -4,7 +4,8 @@
 
 }
 .active_Welcome{
-    background: #523724;
+
+    backdrop-filter: blur(50px);
 }
 .logo {
     width: 75px;

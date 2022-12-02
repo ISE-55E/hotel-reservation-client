@@ -39,10 +39,11 @@ export default class Welcome extends Component{
                                         <Nav.Link href="#link">Contacts</Nav.Link>
                                         <Nav.Link href="#link">Services</Nav.Link>
                                     </Nav>
-                                    <Navbar.Brand className={"BtnNav d-flex justify-content-center"} href="#home">
-                                        <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
-                                        <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
-                                    </Navbar.Brand>
+                                        <Navbar.Brand className={"BtnNav d-flex justify-content-center"} href="#home">
+                                            <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
+                                            <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
+                                        </Navbar.Brand>
+
                                 </Navbar.Collapse>
                             </Container>
                         </Navbar>
