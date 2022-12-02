@@ -13,7 +13,7 @@ Switch.propTypes = {children: PropTypes.node};
 export default class Footer extends Component {
     render() {
         return (
-            <div className={"footer"}>
+            <div id={"anvar"} className={"footer"}>
                 <Container>
                       <Row className={"d-flex LengthRow"}>
                           <Col lg={4} md={6} sm={12}>

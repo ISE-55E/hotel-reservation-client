@@ -6,6 +6,7 @@ import ServiceInLanding from "../services_in_landing/serviceInLanding";
 import EventsInLanding from "../events_in_landing/eventsInLanding";
 import Footer from "../footer/footer";
 import FoodInLanding from "../foods_in_landing/foodInLanding";
+import FeedbackInLanding from "../feedback_in_landing/feedbackInLanding";
 
 export default class Landing extends Component{
     render() {
@@ -14,6 +15,7 @@ export default class Landing extends Component{
                 {/*<Header />*/}
                 <Welcome />
                 <RoomsInLanding />
+                <FeedbackInLanding />
                 <ServiceInLanding />
                 <FoodInLanding />
                 <EventsInLanding />

@@ -31,12 +31,12 @@ export default class Welcome extends Component{
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="fakafaka d-flex align-items-center">
-                                        <Nav.Link href="#home">Home</Nav.Link>
-                                        <Nav.Link href="#link">Gallery</Nav.Link>
-                                        <Nav.Link href="#link">About Us</Nav.Link>
-                                        <Nav.Link href="#link"><img src="/images/Logo.png" alt=".png" className="logo"/></Nav.Link>
-                                        <Nav.Link href="#home">Rooms</Nav.Link>
-                                        <Nav.Link href="#link">Contacts</Nav.Link>
+                                        <Nav.Link href="/">Home</Nav.Link>
+                                        <Nav.Link href="/gallery">Gallery</Nav.Link>
+                                        <Nav.Link href="/about-us">About Us</Nav.Link>
+                                        <Nav.Link href="/"><img src="/images/Logo.png" alt=".png" className="logo"/></Nav.Link>
+                                        <Nav.Link href="/rooms">Rooms</Nav.Link>
+                                        <Nav.Link href="#anvar">Contacts</Nav.Link>
                                         <Nav.Link href="#link">Services</Nav.Link>
                                     </Nav>
                                         <Navbar.Brand className={"BtnNav d-flex justify-content-center"} href="#home">
@@ -51,9 +51,9 @@ export default class Welcome extends Component{
                     <div className="welcome_text">
                         <p>Welcome</p>
                         <p>Take a rest in Amathings</p>
-                        <p>the perfect place & services & national food & comfort prices</p>
-                    </div>
+                        <h3>the perfect place & services & national food & comfort prices</h3>
                     <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
+                    </div>
             </Container>
         );
     }

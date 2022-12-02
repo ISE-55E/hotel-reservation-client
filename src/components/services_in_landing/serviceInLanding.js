@@ -59,6 +59,9 @@ export default class ServiceInLanding extends Component {
         let len = this.state.items.length
         return (
             <div className="serviceInLanding">
+
+
+                {/*--------------------------upper-------------------------------*/}
                 <Swiper
                     spaceBetween={50}
                     slidesPerView={3}

@@ -1,14 +1,14 @@
-.fakaferi{
+.fakaferi {
     width: 100%;
     background: #8A8A8A;
     backdrop-filter: blur(200px);
 }
-.RegImg{
-    width: 370px;
+@media  (max-width: 1000px){
+    .RegImg{
+        display: none;
+    }
 }
-.ModalBody{
-    padding: 0!important;
-}
+
 
 
 /*@media (max-width: 900px){*/
