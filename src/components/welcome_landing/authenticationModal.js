@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 import {Button, Col, Form, Modal, Row} from "react-bootstrap";
 import "./SignInParty.css";
+import AuthContext from "../../context/AuthContext";
 
 class AuthenticationModal extends Component {
+    static contextType = AuthContext;
     render() {
         let {toggle} = this.props;
+        let {loginUser} = this.context;
 
         return (
             <Modal
@@ -17,10 +20,10 @@ class AuthenticationModal extends Component {
                 <div className="w-100 h-100 bg-invisible rounded-4 p-0 m-0">
                     <Row className="w-100 m-0">
                         <Col sm={12} lg={6}>
-                            <Form className={"p-0 m-4"}>
+                            <Form className={"p-0 m-4"} onSubmit={loginUser}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
-                                    <Form.Control name="email" type="email" placeholder="Enter email" />
+                                    <Form.Control name="username" type="text" placeholder="Enter email" />
                                     <Form.Text className="text-muted">
                                         We'll never share your email with anyone else.
                                     </Form.Text>

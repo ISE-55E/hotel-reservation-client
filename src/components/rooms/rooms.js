@@ -1,5 +1,5 @@
 import {Component} from "react";
-import {Button, Col, Container, FloatingLabel, Form, Image, Row} from "react-bootstrap";
+import {Button, Col, Container, Form, Image, Row} from "react-bootstrap";
 import './rooms.css';
 import RoomItem from "./roomItem";
 import server from "../../index";
