@@ -1,19 +1,27 @@
 import {Component} from "react";
-import {Button, Col, Container, Form, Nav, Navbar, NavDropdown, Row} from "react-bootstrap";
+import {Button, Container, Nav, Navbar, Row} from "react-bootstrap";
 import AuthenticationModal from "./authenticationModal";
 import './welcome.css';
+import AuthContext from "../../context/AuthContext";
 
 
 export default class Welcome extends Component{
+    static contextType = AuthContext;
+
     constructor(props) {
         super(props);
         this.state = {
-            authenticationModal: false
+            authenticationModal: false,
+            user: null
         }
     }
 
     toggleAuthenticationModal = () => {
         this.setState({authenticationModal: !this.state.authenticationModal});
+    }
+
+    componentDidMount() {
+        console.log(this.context)
     }
 
     render() {
@@ -40,10 +48,10 @@ export default class Welcome extends Component{
                                         <Nav.Link href="#link">Services</Nav.Link>
                                     </Nav>
                                         <Navbar.Brand className={"BtnNav d-flex justify-content-center"} href="#home">
+
                                             <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
                                             <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
                                         </Navbar.Brand>
-
                                 </Navbar.Collapse>
                             </Container>
                         </Navbar>

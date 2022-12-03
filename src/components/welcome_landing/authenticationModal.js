@@ -20,17 +20,14 @@ class AuthenticationModal extends Component {
                             <Form className={"p-0 m-4"}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
-                                    <Form.Control type="email" placeholder="Enter email" />
+                                    <Form.Control name="email" type="email" placeholder="Enter email" />
                                     <Form.Text className="text-muted">
                                         We'll never share your email with anyone else.
                                     </Form.Text>
                                 </Form.Group>
                                 <Form.Group className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control type="password" placeholder="Password" />
-                                </Form.Group>
-                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <Form.Check type="checkbox" label="Check me out" />
+                                    <Form.Control name="password" type="password" placeholder="Password" />
                                 </Form.Group>
                                 <Button variant="primary" type="submit">
                                     Submit
@@ -48,32 +45,3 @@ class AuthenticationModal extends Component {
 }
 
 export default AuthenticationModal;
-
-
-
-{/*<Row className="bg-invisible">*/}
-{/*    <Col sm={12} lg={6}>*/}
-{/*        <Form className={"p-0 m-4"}>*/}
-{/*            <Form.Group className="mb-3" controlId="formBasicEmail">*/}
-{/*                <Form.Label>Email address</Form.Label>*/}
-{/*                <Form.Control type="email" placeholder="Enter email" />*/}
-{/*                <Form.Text className="text-muted">*/}
-{/*                    We'll never share your email with anyone else.*/}
-{/*                </Form.Text>*/}
-{/*            </Form.Group>*/}
-{/*            <Form.Group className="mb-3" controlId="formBasicPassword">*/}
-{/*                <Form.Label>Password</Form.Label>*/}
-{/*                <Form.Control type="password" placeholder="Password" />*/}
-{/*            </Form.Group>*/}
-{/*            <Form.Group className="mb-3" controlId="formBasicCheckbox">*/}
-{/*                <Form.Check type="checkbox" label="Check me out" />*/}
-{/*            </Form.Group>*/}
-{/*            <Button variant="primary" type="submit">*/}
-{/*                Submit*/}
-{/*            </Button>*/}
-{/*        </Form>*/}
-{/*    </Col>*/}
-{/*    <Col className={"RegImgPar"} lg={6} >*/}
-{/*        <img className={"RegImg"} src="/images/RegistrationPart.png" alt=".png" />*/}
-{/*    </Col>*/}
-{/*</Row>*/}
