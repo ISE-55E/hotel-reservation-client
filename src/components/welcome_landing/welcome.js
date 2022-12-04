@@ -43,7 +43,6 @@ export default class Welcome extends Component{
                                             <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
                                             <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
                                         </Navbar.Brand>
-
                                 </Navbar.Collapse>
                             </Container>
                         </Navbar>
@@ -61,12 +60,4 @@ export default class Welcome extends Component{
 
 const nav = document.querySelector('nav')
 
-window.addEventListener('Scroll', () => {
-    if (window.scrolly>=50) {
-        nav.classList.add('active_Welcome');
-    }
-    else {
-        nav.classList.remove('active_Welcome');
-    }
-})
 

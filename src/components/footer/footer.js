@@ -15,9 +15,9 @@ export default class Footer extends Component {
         return (
             <div id={"anvar"} className={"footer"}>
                 <Container>
-                      <Row className={"d-flex LengthRow"}>
-                          <Col lg={4} md={6} sm={12}>
-                                  <Navbar variant={"dark"} className={"flex-column text-center"}>
+                      <Row className={"LengthRow"}>
+                          <Col lg={4} md={6} sm={12} className={"d-flex justify-content-center"}>
+                                  <Navbar variant={"dark"} className={"flex-column align-content-center"}>
                                       <Navbar.Brand href="#home">Pages</Navbar.Brand>
                                       <Nav className="me-auto flex-column align-items-lg-start">
                                           <Nav.Link href="#home">home</Nav.Link>
@@ -28,7 +28,7 @@ export default class Footer extends Component {
                                       </Nav>
                                   </Navbar>
                           </Col>
-                          <Col lg={4} md={6} sm={12}>
+                          <Col lg={4} md={6} sm={12} className="d-flex justify-content-center">
                               <Navbar variant={"dark"} className={"flex-column align-items-lg-start"}>
                                   <Navbar.Brand href="#home">Our Services</Navbar.Brand>
                                   <Nav className="me-auto flex-column align-items-lg-start">
@@ -40,7 +40,7 @@ export default class Footer extends Component {
                                   </Nav>
                               </Navbar>
                           </Col>
-                          <Col lg={4}  md={12} sm={12} >
+                          <Col lg={4}  md={12} sm={12} className={"flex-column d-flex align-items-center text-center mt-3"}>
                               <h5>Subscribe</h5>
                               <p>subscribe to our channels to know our new events and comfort price</p>
                               <Form className="d-flex bg-light p-1 rounded-2 subscribe">
