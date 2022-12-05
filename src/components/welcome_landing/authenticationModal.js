@@ -4,6 +4,7 @@ import "./SignInParty.css";
 import AuthContext from "../../context/AuthContext";
 
 class AuthenticationModal extends Component {
+
     static contextType = AuthContext;
     render() {
         let {toggle} = this.props;
