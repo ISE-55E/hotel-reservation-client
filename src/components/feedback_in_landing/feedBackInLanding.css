@@ -6,20 +6,3 @@
 .ImgFeedBack{
     width: 300px;
 }
-.FeedBackRow{
-
-}
-@media (max-width: 1000px) {
-    .FeedbackInLanding .left{
-        display: none;
-    }
-    .FeedbackInLanding .right{
-        display: flex;
-        justify-content: center;
-    }
-
-
-}
-.FeedBackLabel{
-    width: 400px;
-}
