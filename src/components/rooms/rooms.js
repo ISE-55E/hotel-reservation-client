@@ -4,6 +4,7 @@ import './rooms.css';
 import RoomItem from "./roomItem";
 import server from "../../index";
 import {Link} from "react-router-dom";
+import BookRoom from "../book_room/bookRoom";
 
 export default class Rooms extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ export default class Rooms extends Component {
             items: [],
             categoryList: [],
             typeRoomList: [],
+            activeRoom: null,
             sort: {
                 category: '',
                 type_room: '',
