@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Card, Carousel, Col, Row} from "react-bootstrap";
+import {Button, Card, Carousel, Col} from "react-bootstrap";
 import ShowImageModal from "./showImageModal";
 import server from "../../index";
 

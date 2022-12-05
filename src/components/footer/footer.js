@@ -1,7 +1,6 @@
 import {Component} from "react";
 import './footer.css';
 import {Button, Col, Container, Form, Nav, Navbar, Row} from "react-bootstrap";
-import {Route, Router} from "react-router-dom";
 import * as PropTypes from "prop-types";
 
 
