@@ -18,7 +18,7 @@ export default class Foodimagemodal extends Component {
                 <div className="w-100 bg-invisible">
                     <Image src={this.state.image} className="w-100"/>
                 </div>
-            </Modal>gid
+            </Modal>
         )
     };
 }
