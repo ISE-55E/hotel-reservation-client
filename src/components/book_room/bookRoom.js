@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Carousel, Col, Container, Form, FormControl, FormGroup, FormLabel, Modal, Row} from "react-bootstrap";
 import './bookRoom.css';
+import moment from "moment";
 
 class BookRoom extends Component {
     constructor(props) {
@@ -9,8 +10,8 @@ class BookRoom extends Component {
             bookingDetails: {
                 room: this.props.item.id,
                 price: this.props.item.price,
-                from_time: 0,
-                to_time: 0
+                from_time: null,
+                to_time: null
             },
         }
     }
@@ -25,9 +26,21 @@ class BookRoom extends Component {
         const bookingDetails = {...this.state.bookingDetails, [name]: value};
 
         this.setState({bookingDetails}, () => {
+            console.log(this.state.bookingDetails.from_time)
             let from = new Date(this.state.bookingDetails.from_time);
             let to = new Date(this.state.bookingDetails.to_time);
-            console.log(to.getDate() - from.getDate());
+
+            if (this.state.bookingDetails.from_time != null && this.state.bookingDetails.to_time != null && from < to && to - from >= 1){
+
+                let totalPrice = this.props.item.price / 24 * (to - from) / 3600000;
+
+
+
+                console.log(totalPrice);
+            }
+
+            console.log((to - from) / 3600000);
+
         });
     }
 
