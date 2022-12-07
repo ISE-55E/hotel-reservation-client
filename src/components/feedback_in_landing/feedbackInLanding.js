@@ -11,26 +11,24 @@ function FeedBackDiv(props) {
 class FeedbackInLanding extends Component {
     render() {
         return (
-            <Container>
-              <Row className="FeedBack ">
-                  <Col lg={6} sm={12} className="left">
-                      <img src="/images/Vise.jpg" alt=".png"/>
-                  </Col>
-                  <Col lg={6} sm={12} className="right">
-                      <FloatingLabel controlId="floatingTextarea2" label="Comments">
-                          <Form.Control
-                              as="textarea"
-                              placeholder="Leave a comment here"
-                              style={{ height: '100px' }}
-                          />
-                      </FloatingLabel>
-                      <div className="buttons d-flex justify-content-end mt-4">
-                          <Button className="btn1 rounded-0">Submit</Button>{' '}
-                          <Button className="btn2 rounded-0">Clear</Button>
-                      </div>
-                  </Col>
-              </Row>
-            </Container>
+                <Row className="w-50">
+                    <Col className="bg-warning left d-flex justify-content-end" lg={6} sm={12}>
+                        <img src="/images/Vise.jpg" alt=".jpg"/>
+                    </Col>
+                    <Col className="bg-danger p-3" lg={6} sm={12}>
+                        <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                            <Form.Control
+                                as="textarea"
+                                placeholder="Leave a comment here"
+                                style={{ height: '100px' }}
+                            />
+                        </FloatingLabel>
+                        <div className="buttons">
+                            <Button className="btn1 rounded-0 m-2 ">Submit</Button>
+                            <Button className="btn2 rounded-0 m-2">Secondary</Button>
+                        </div>
+                    </Col>
+                </Row>
         );
     }
 }
