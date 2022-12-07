@@ -10,7 +10,7 @@ import FeedbackInLanding from "../feedback_in_landing/feedbackInLanding";
 export default class Landing extends Component{
     render() {
         return (
-            <div>
+            <div className="d-flex flex-column align-items-center">
                 {/*<Header />*/}
                 <Welcome />
                 <RoomsInLanding />
