@@ -1,29 +1,36 @@
 import React, {Component} from 'react';
 import "./feedBackInLanding.css";
-import {Button, Col, Form, Row} from "react-bootstrap";
+import {Button, Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
+import * as PropTypes from "prop-types";
+
+function FeedBackDiv(props) {
+    return null;
+}
+
 
 class FeedbackInLanding extends Component {
     render() {
         return (
-            <div className="FeedbackInLanding d-flex justify-content-center">
-                <Row className={"w-50 flex-wrap"}>
-
-                    <Col>
-                        <img className="ImgFeedBack" src="/images/Vise.jpg" alt=".jpg" />
-                    </Col>
-
-                    <Col>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Example textarea</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                            </Form.Group>
-                            <Button variant="light" type="submit">Clear</Button>{' '}
-                            <Button variant="primary" type="submit">Submit</Button>
-                        </Form>
-                    </Col>
-                </Row>
-             </div>
+            <Container>
+              <Row className="FeedBack ">
+                  <Col lg={6} sm={12} className="left">
+                      <img src="/images/Vise.jpg" alt=".png"/>
+                  </Col>
+                  <Col lg={6} sm={12} className="right">
+                      <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                          <Form.Control
+                              as="textarea"
+                              placeholder="Leave a comment here"
+                              style={{ height: '100px' }}
+                          />
+                      </FloatingLabel>
+                      <div className="buttons d-flex justify-content-end mt-4">
+                          <Button className="btn1 rounded-0">Submit</Button>{' '}
+                          <Button className="btn2 rounded-0">Clear</Button>
+                      </div>
+                  </Col>
+              </Row>
+            </Container>
         );
     }
 }
