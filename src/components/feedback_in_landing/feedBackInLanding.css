@@ -3,23 +3,32 @@
     height: 300px;
     background-color: #ffffff;
 }
-.ImgFeedBack{
-    width: 300px;
+*{
+    margin: 0;
+    padding: 0;
 }
-.FeedBackRow{
-
+.left img{
+    width: 100%;
 }
-@media (max-width: 1000px) {
-    .FeedbackInLanding .left{
-        display: none;
-    }
-    .FeedbackInLanding .right{
-        display: flex;
-        justify-content: center;
-    }
-
-
+.btn1{
+    border: none !important;
+    background: #523724 !important;
+    transition: 0.7s;
 }
-.FeedBackLabel{
-    width: 400px;
+.btn2{
+    border: none !important;
+    background: #8A8A8A !important;
+    transition: 0.7s;
+}
+.btn1:hover{
+    transition: 0.7s;
+    color: #523724 !important;
+    border: none !important;
+    background: #ffffff !important;
+}
+.btn2:hover{
+    transition: 0.7s;
+    color: #523724 !important;
+    border: none !important;
+    background: #fff !important;
 }

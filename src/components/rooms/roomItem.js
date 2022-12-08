@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Button, Card, Carousel, Col} from "react-bootstrap";
 import ShowImageModal from "./showImageModal";
 import server from "../../index";
+import BookRoom from "../book_room/bookRoom";
 
 class RoomItem extends Component {
     constructor(props) {
@@ -12,6 +13,7 @@ class RoomItem extends Component {
             image: null,
             category: null,
             type_room: null,
+            bookRoomModal: false,
         }
     }
 
@@ -22,6 +24,10 @@ class RoomItem extends Component {
 
     toggleShowImageModal = () => {
         this.setState({ showImageModal: !this.state.showImageModal })
+    }
+
+    toggleBookRoomModal = () => {
+        this.setState({bookRoomModal: !this.state.bookRoomModal});
     }
 
     openImage = (image) => {
@@ -58,6 +64,12 @@ class RoomItem extends Component {
                     <ShowImageModal
                         image={this.state.image}
                         toggle={this.toggleShowImageModal}
+                    />
+                ) : null}
+                {this.state.bookRoomModal ? (
+                    <BookRoom
+                        toggle={this.toggleBookRoomModal}
+                        item={this.props.item}
                     />
                 ) : null}
                 <Col xs={4} className="">
@@ -114,6 +126,7 @@ class RoomItem extends Component {
                     <Card.Text className="p-2 d-flex justify-content-center align-items-center">
                         <Button
                             variant="outline-primary btn-size d-flex justify-content-center align-items-center rounded-0 button-color"
+                            onClick={this.toggleBookRoomModal}
                         >
                             {this.props.item.busy ? "Room Busy" : "Book Now"}
                         </Button>

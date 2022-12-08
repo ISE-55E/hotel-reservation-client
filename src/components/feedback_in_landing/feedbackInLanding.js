@@ -1,29 +1,34 @@
 import React, {Component} from 'react';
 import "./feedBackInLanding.css";
-import {Button, Col, Form, Row} from "react-bootstrap";
+import {Button, Col, Container, FloatingLabel, Form, Row} from "react-bootstrap";
+import * as PropTypes from "prop-types";
+
+function FeedBackDiv(props) {
+    return null;
+}
+
 
 class FeedbackInLanding extends Component {
     render() {
         return (
-            <div className="FeedbackInLanding d-flex justify-content-center">
-                <Row className={"w-50"}>
-                    <Col lg={6} md={12} sm={12}>
-                        <img className="ImgFeedBack" src="/images/Vise.jpg" alt=".jpg" />
+                <Row className="w-50">
+                    <Col className="bg-warning left d-flex justify-content-end" lg={6} sm={12}>
+                        <img src="/images/Vise.jpg" alt=".jpg"/>
                     </Col>
-                    <Col lg={6} md={12} sm={12}>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>Example textarea</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                            </Form.Group>
-                            <Button variant="light" type="submit">Clear</Button>{' '}
-                            <Button variant="primary" type="submit">Submit</Button>
-                        </Form>
+                    <Col className="bg-danger p-3" lg={6} sm={12}>
+                        <FloatingLabel controlId="floatingTextarea2" label="Comments">
+                            <Form.Control
+                                as="textarea"
+                                placeholder="Leave a comment here"
+                                style={{ height: '100px' }}
+                            />
+                        </FloatingLabel>
+                        <div className="buttons">
+                            <Button className="btn1 rounded-0 m-2 ">Submit</Button>
+                            <Button className="btn2 rounded-0 m-2">Secondary</Button>
+                        </div>
                     </Col>
                 </Row>
-             </div>
-
-
         );
     }
 }

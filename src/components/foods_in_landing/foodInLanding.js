@@ -1,12 +1,13 @@
-import {Component} from "react";
-import './foodInLanding.css';
+import React, {Component} from 'react';
 
-export default class FoodInLanding extends Component {
-    render () {
+class FoodInLanding extends Component {
+    render() {
         return (
-            <div className="foodInLanding">
-                <h1>Food</h1>
+            <div>
+                
             </div>
         );
     }
 }
+
+export default FoodInLanding;
