@@ -49,10 +49,6 @@ export default class EventsInLanding extends Component {
     };
 
     render() {
-        const slides = [];
-
-
-
         return (
             <div className="eventsInLanding">
                 {this.state.items.length > 0 ?

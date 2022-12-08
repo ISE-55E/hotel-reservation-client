@@ -3,7 +3,6 @@ import {Button, Card, Carousel, Col, Container, Row, Stack} from "react-bootstra
 import './privateArea.css';
 import Header from "../header/header";
 import Footer from "../footer/footer";
-import RoomCardInPrivateArea from "./roomCardInPrivateArea";
 import {Link} from "react-router-dom";
 
 export default class PrivateArea extends Component {

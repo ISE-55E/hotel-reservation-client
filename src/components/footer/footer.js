@@ -31,7 +31,7 @@ export default class Footer extends Component {
                           <Col lg={4} md={6} sm={12} className="d-flex justify-content-center">
                               <Navbar variant={"dark"} className={"flex-column align-items-lg-start"}>
                                   <Navbar.Brand href="#home">Our Services</Navbar.Brand>
-                                  <Nav className="me-auto flex-column align-items-lg-start">
+                                  <Nav className="me-auto flex-column">
                                       <Nav.Link href="#home">Spa</Nav.Link>
                                       <Nav.Link href="#aboutus">Night club</Nav.Link>
                                       <Nav.Link href="#gallery">Ball</Nav.Link>
