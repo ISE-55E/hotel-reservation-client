@@ -1,23 +1,19 @@
 import React, {Component} from 'react';
 import {Button, Carousel, Col, Container, Form, FormControl, FormGroup, FormLabel, Modal, Row} from "react-bootstrap";
 import './bookRoom.css';
-import moment from "moment";
 
 class BookRoom extends Component {
     constructor(props) {
         super(props);
         this.state = {
             bookingDetails: {
-                room: this.props.item.id,
+                room: [this.props.item.id,],
                 price: this.props.item.price,
                 from_time: null,
-                to_time: null
-            },
+                to_time: null,
+                service: []
+            }
         }
-    }
-
-    submitBooking = () => {
-    //    post to backend
     }
 
     handleChange = (e) => {
@@ -26,26 +22,20 @@ class BookRoom extends Component {
         const bookingDetails = {...this.state.bookingDetails, [name]: value};
 
         this.setState({bookingDetails}, () => {
-            console.log(this.state.bookingDetails.from_time)
             let from = new Date(this.state.bookingDetails.from_time);
             let to = new Date(this.state.bookingDetails.to_time);
 
             if (this.state.bookingDetails.from_time != null && this.state.bookingDetails.to_time != null && from < to && to - from >= 1){
 
                 let totalPrice = this.props.item.price / 24 * (to - from) / 3600000;
-
-
-
-                console.log(totalPrice);
+                const bookingDetails = {...this.state.bookingDetails, 'price': totalPrice};
+                this.setState({bookingDetails});
             }
-
-            console.log((to - from) / 3600000);
-
         });
     }
 
     render() {
-        let {toggle} = this.props;
+        let {toggle, onSave} = this.props;
 
         return (
             <Modal
@@ -147,7 +137,7 @@ class BookRoom extends Component {
                             </Col>
                             <Container className="px-5 py-3">
                                 <Row className="px-3">
-                                    <Button type="submit" className="book-button shadow" onClick={this.submitBooking}>
+                                    <Button type="submit" className="book-button shadow" onClick={() => onSave(this.state.bookingDetails)}>
                                         Book
                                     </Button>
                                 </Row>

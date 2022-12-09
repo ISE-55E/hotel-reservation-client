@@ -3,6 +3,7 @@ import {Button, Card, Carousel, Col} from "react-bootstrap";
 import ShowImageModal from "./showImageModal";
 import server from "../../index";
 import BookRoom from "../book_room/bookRoom";
+import axios from "axios";
 
 class RoomItem extends Component {
     constructor(props) {
@@ -57,6 +58,30 @@ class RoomItem extends Component {
             })
     }
 
+    handleSubmit = (item) => {
+        this.toggleBookRoomModal();
+
+        let {refresh} = this.props;
+
+        refresh();
+
+        axios
+            .post(`${server}apps/reservation/create/`,
+                item,
+                {
+                    headers: {
+                        'Authorization': `Bearer ${JSON.parse(localStorage.getItem('authTokens')).access}`
+                    }
+                }
+            )
+            .then(res => {
+                alert("Order received!!!");
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }
+
     render() {
         return (
             <Card className="bg-warning rounded-0 d-flex flex-row justify-content-between bg-light my-3 card-height shadow">
@@ -70,6 +95,7 @@ class RoomItem extends Component {
                     <BookRoom
                         toggle={this.toggleBookRoomModal}
                         item={this.props.item}
+                        onSave={this.handleSubmit}
                     />
                 ) : null}
                 <Col xs={4} className="">
@@ -127,6 +153,7 @@ class RoomItem extends Component {
                         <Button
                             variant="outline-primary btn-size d-flex justify-content-center align-items-center rounded-0 button-color"
                             onClick={this.toggleBookRoomModal}
+                            disabled={this.props.item.busy ? true : false}
                         >
                             {this.props.item.busy ? "Room Busy" : "Book Now"}
                         </Button>

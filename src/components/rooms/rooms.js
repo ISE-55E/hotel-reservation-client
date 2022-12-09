@@ -148,7 +148,7 @@ export default class Rooms extends Component {
         }
 
         return items.map((item) => (
-            <RoomItem item={item} key={item.id} />
+            <RoomItem item={item} key={item.id} refresh={this.refreshList}/>
         ))
     }
 

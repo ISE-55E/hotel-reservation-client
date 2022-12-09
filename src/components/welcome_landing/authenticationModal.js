@@ -2,12 +2,25 @@ import React, {Component} from 'react';
 import {Button, Col, Form, Modal, Row} from "react-bootstrap";
 import "./SignInParty.css";
 import AuthContext from "../../context/AuthContext";
+import * as events from "events";
 
 class AuthenticationModal extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     static contextType = AuthContext;
+
+    closeModal = (e) => {
+        let {onSave} = this.props;
+        let {loginUser} = this.context;
+
+        onSave();
+        loginUser(e);
+    }
+
     render() {
-        let {toggle} = this.props;
+        let {toggle, onSave} = this.props;
         let {loginUser} = this.context;
 
         return (
@@ -21,7 +34,7 @@ class AuthenticationModal extends Component {
                 <div className="w-100 h-100 bg-invisible rounded-4 p-0 m-0">
                     <Row className="w-100 m-0">
                         <Col sm={12} lg={6}>
-                            <Form className={"p-0 m-4"} onSubmit={loginUser}>
+                            <Form className={"p-0 m-4"} onSubmit={this.closeModal}>
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label>Email address</Form.Label>
                                     <Form.Control name="username" type="text" placeholder="Enter email" />

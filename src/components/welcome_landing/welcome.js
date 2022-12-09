@@ -28,6 +28,10 @@ export default class Welcome extends Component{
         this.context.logoutUser()
     }
 
+    handleSubmit = () => {
+        this.toggleAuthenticationModal();
+    }
+
     render() {
         // console.log(this.state.user ? this.state.user : "Ok")
         return (
@@ -35,6 +39,7 @@ export default class Welcome extends Component{
                     {this.state.authenticationModal ? (
                         <AuthenticationModal
                             toggle={this.toggleAuthenticationModal}
+                            onSave={this.handleSubmit}
                         />
                     ) : null}
                     <Row className="fixed-top w-100 m-0 active_Welcome">
@@ -56,7 +61,7 @@ export default class Welcome extends Component{
                                             {this.context.user ?
                                                 <>
                                                     <p className="mx-3">
-                                                        {this.context.user.first_name}
+                                                        {this.context.user.first_name} {this.context.user.last_name}
                                                     </p>
                                                     <p className="cursor-pointer" onClick={this.logOut}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
