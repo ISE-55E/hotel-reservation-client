@@ -52,11 +52,9 @@ export default class Welcome extends Component{
                                         <Nav.Link href="#anvar">Contacts</Nav.Link>
                                         <Nav.Link href="#link">Services</Nav.Link>
                                     </Nav>
-<<<<<<< HEAD
                                         <Navbar.Brand className={"BtnNav d-flex justify-content-center"} href="#home">
                                             <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
                                             <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
-=======
                                         <Navbar.Brand className={"BtnNav d-flex justify-content-center"}>
                                             {this.context.user ?
                                                 <>
@@ -81,8 +79,6 @@ export default class Welcome extends Component{
                                                     <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
                                                 </>
                                             }
-
->>>>>>> 8838ee306ca312da8a060f4ef315225c6c0a3bb9
                                         </Navbar.Brand>
                                 </Navbar.Collapse>
                             </Container>
@@ -92,13 +88,13 @@ export default class Welcome extends Component{
                         <p>Welcome</p>
                         <p>Take a rest in Amathings</p>
                         <h3>the perfect place & services & national food & comfort prices</h3>
-                    <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
+                        <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
                     </div>
             </Container>
         );
     }
 }
 
-const nav = document.querySelector('nav')
+
 
 

@@ -15,14 +15,9 @@ export default class Footer extends Component {
         return (
             <div id={"anvar"} className={"footer"}>
                 <Container>
-                      <Row className={"LengthRow"}>
-                          <Col lg={4} md={6} sm={12} className={"d-flex justify-content-center"}>
-                                  <Navbar variant={"dark"} className={"flex-column align-content-center"}>
-
                       <Row className={"d-flex"}>
                           <Col lg={4} md={6} sm={12} className="d-flex justify-content-center">
                                   <Navbar variant={"dark"} className={"flex-column"}>
-
                                       <Navbar.Brand href="#home">Pages</Navbar.Brand>
                                       <Nav className="me-auto flex-column align-items-lg-start">
                                           <Nav.Link href="#home">home</Nav.Link>
@@ -36,9 +31,6 @@ export default class Footer extends Component {
                           <Col lg={4} md={6} sm={12} className="d-flex justify-content-center">
 
                               <Navbar variant={"dark"} className={"flex-column align-items-lg-start"}>
-
-                              <Navbar variant={"dark"} className={"flex-column"}>
-
                                   <Navbar.Brand href="#home">Our Services</Navbar.Brand>
                                   <Nav className="me-auto flex-column">
                                       <Nav.Link href="#home">Spa</Nav.Link>
@@ -50,7 +42,6 @@ export default class Footer extends Component {
                               </Navbar>
                           </Col>
                           <Col lg={4}  md={12} sm={12} className={"flex-column d-flex align-items-center text-center mt-3"}>
-                          <Col lg={4}  md={12} sm={12} className="d-flex flex-column justify-content-center text-sm-center">
                               <h5>Subscribe</h5>
                               <p>subscribe to our channels to know our new events and comfort price</p>
                               <Form className="d-flex bg-light p-1 rounded-2 subscribe">
