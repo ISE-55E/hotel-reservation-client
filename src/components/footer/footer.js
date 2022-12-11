@@ -1,6 +1,7 @@
 import {Component} from "react";
 import './footer.css';
 import {Button, Col, Container, Form, Nav, Navbar, Row} from "react-bootstrap";
+import {Route, Router} from "react-router-dom";
 import * as PropTypes from "prop-types";
 
 
@@ -28,9 +29,10 @@ export default class Footer extends Component {
                                   </Navbar>
                           </Col>
                           <Col lg={4} md={6} sm={12} className="d-flex justify-content-center">
-                              <Navbar variant={"dark"} className={"flex-column"}>
+
+                              <Navbar variant={"dark"} className={"flex-column align-items-lg-start"}>
                                   <Navbar.Brand href="#home">Our Services</Navbar.Brand>
-                                  <Nav className="me-auto flex-column align-items-lg-start">
+                                  <Nav className="me-auto flex-column">
                                       <Nav.Link href="#home">Spa</Nav.Link>
                                       <Nav.Link href="#aboutus">Night club</Nav.Link>
                                       <Nav.Link href="#gallery">Ball</Nav.Link>
@@ -39,7 +41,7 @@ export default class Footer extends Component {
                                   </Nav>
                               </Navbar>
                           </Col>
-                          <Col lg={4}  md={12} sm={12} className="d-flex flex-column justify-content-center text-sm-center">
+                          <Col lg={4}  md={12} sm={12} className={"flex-column d-flex align-items-center text-center mt-3"}>
                               <h5>Subscribe</h5>
                               <p>subscribe to our channels to know our new events and comfort price</p>
                               <Form className="d-flex bg-light p-1 rounded-2 subscribe">

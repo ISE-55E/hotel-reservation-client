@@ -43,7 +43,6 @@ export default class Welcome extends Component{
     }
 
     render() {
-        // console.log(this.state.user ? this.state.user : "Ok")
         return (
                 <Container fluid className="welcome d-flex flex-column align-items-center p-0">
                     {this.state.authenticationModal ? (
@@ -97,7 +96,6 @@ export default class Welcome extends Component{
                                                     <Button onClick={this.toggleAuthenticationModal} className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
                                                 </>
                                             }
-
                                         </Navbar.Brand>
                                 </Navbar.Collapse>
                             </Container>
@@ -107,21 +105,13 @@ export default class Welcome extends Component{
                         <p>Welcome</p>
                         <p>Take a rest in Amathings</p>
                         <h3>the perfect place & services & national food & comfort prices</h3>
-                    <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
+                        <Button className={"rounded-0 Bookbtn"} variant="outline-light">Book Now</Button>{' '}
                     </div>
             </Container>
         );
     }
 }
 
-const nav = document.querySelector('nav')
 
-window.addEventListener('Scroll', () => {
-    if (window.scrolly>=50) {
-        nav.classList.add('active_Welcome');
-    }
-    else {
-        nav.classList.remove('active_Welcome');
-    }
-})
+
 
