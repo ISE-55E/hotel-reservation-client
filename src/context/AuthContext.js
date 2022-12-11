@@ -29,6 +29,27 @@ export const AuthProvider = ({children}) => {
             })
     }
 
+    let registerUser = (e) => {
+        e.preventDefault();
+
+        axios
+            .post(`${server}apps/user/client/create/`, {
+                first_name: e.target.first_name.value,
+                last_name: e.target.last_name.value,
+                email: e.target.email.value,
+                password: e.target.password.value,
+                phone: e.target.phone.value,
+            })
+            .then(res => {
+                setAuthTokens(res.data)
+                setUser(jwtDecode(res.data.access));
+                localStorage.setItem('authTokens', JSON.stringify(res.data));
+            })
+            .catch(err => {
+                alert("Something went wrong");
+            })
+    }
+
     let logoutUser = () => {
         setAuthTokens(null)
         setUser(null)
@@ -55,8 +76,9 @@ export const AuthProvider = ({children}) => {
 
     let contextData = {
         user: user,
+        registerUser: registerUser,
         loginUser: loginUser,
-        logoutUser: logoutUser
+        logoutUser: logoutUser,
     }
 
     useEffect(() => {

@@ -4,9 +4,20 @@
 }
 
 .back-light {
-    background-color: rgba(255, 255, 255, 0.70);
-    backdrop-filter: blur(20px);
-    color: black !important;
+    background-color: rgba(255, 255, 255, 0.70) !important;
+    backdrop-filter: blur(20px) !important;
+    color: black !important ;
+}
+
+.accordion-style {
+    border-radius: 0 !important;
+    background-color: #523724 !important;
+}
+
+.accordion-button {
+    background-color: rgba(255, 255, 255, 0.70) !important;
+    /*backdrop-filter: blur(20px) !important;*/
+    color: black !important ;
 }
 
 .card-height {
