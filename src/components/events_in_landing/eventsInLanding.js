@@ -48,7 +48,7 @@ export default class EventsInLanding extends Component {
         const items = this.state.items;
 
         return items.map((item) => (
-            <SwiperSlide className="swiper-element">
+            <SwiperSlide className="swiper-element" key={item.id}>
                 <img src={item.image} alt=".png" />
                 <div className="event-text p-2 d-flex flex-column justify-content-center align-items-center">
                     <h2>{item.name}</h2>

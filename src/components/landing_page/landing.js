@@ -20,7 +20,7 @@ export default class Landing extends Component{
                 <br/>
                 <div className="w-100 pt-5 pb-3 d-flex flex-column justify-content-center">
                     <div className="w-100 line"/>
-                    <font class="line-text mx-5 px-5">Services</font>
+                    <font className="line-text mx-5 px-5">Services</font>
                 </div>
 
                 <ServiceInLanding />
@@ -28,14 +28,14 @@ export default class Landing extends Component{
                 <br/>
                 <div className="row-title w-100 pt-5 pb-3 d-flex flex-column justify-content-center">
                     <div className="w-100 line"/>
-                    <font class="line-text mx-5 px-5">Delicious</font>
+                    <font className="line-text mx-5 px-5">Delicious</font>
                 </div>
 
                 <FoodInLanding />
                 <EventsInLanding />
 
                 <div className="w-100 p-5 d-flex flex-column justify-content-between align-items-center">
-                    <h1 className="our-location-title">Our location</h1>
+                    <h1 className="our-location-title text-brown">Our location</h1>
                     <iframe
                         title="location of hotel"
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11990.2926933274!2d69.267908!3d41.296393!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3f74710c22b9462e!2sGrand%20Mir%20Hotel!5e0!3m2!1sru!2s!4v1669045321940!5m2!1sru!2s"
