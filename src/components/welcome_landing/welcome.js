@@ -3,6 +3,7 @@ import {Button, Container, Nav, Navbar, Row} from "react-bootstrap";
 import AuthenticationModal from "./authenticationModal";
 import './welcome.css';
 import AuthContext from "../../context/AuthContext";
+import RegisterModal from "./registerModal";
 
 
 export default class Welcome extends Component{
@@ -12,6 +13,7 @@ export default class Welcome extends Component{
         super(props);
         this.state = {
             authenticationModal: false,
+            registerModal: false,
             user: null
         }
     }
@@ -20,12 +22,24 @@ export default class Welcome extends Component{
         this.setState({authenticationModal: !this.state.authenticationModal});
     }
 
-    componentDidMount() {
-        console.log(this.context)
+    toggleRegisterModal = () => {
+        this.setState({registerModal: !this.state.registerModal});
     }
+
+    // componentDidMount() {
+    //     console.log(this.context)
+    // }
 
     logOut = () => {
         this.context.logoutUser()
+    }
+
+    handleSubmit = () => {
+        this.toggleAuthenticationModal();
+    }
+
+    handleSubmitRegister = () => {
+        this.toggleRegisterModal();
     }
 
     render() {
@@ -34,6 +48,13 @@ export default class Welcome extends Component{
                     {this.state.authenticationModal ? (
                         <AuthenticationModal
                             toggle={this.toggleAuthenticationModal}
+                            onSave={this.handleSubmit}
+                        />
+                    ) : null}
+                    {this.state.registerModal ? (
+                        <RegisterModal
+                            toggle={this.toggleRegisterModal}
+                            onSave={this.handleSubmitRegister}
                         />
                     ) : null}
                     <Row className="fixed-top w-100 m-0 active_Welcome">
@@ -55,7 +76,7 @@ export default class Welcome extends Component{
                                             {this.context.user ?
                                                 <>
                                                     <p className="mx-3">
-                                                        {this.context.user.first_name}
+                                                        {this.context.user.first_name} {this.context.user.last_name}
                                                     </p>
                                                     <p className="cursor-pointer" onClick={this.logOut}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
@@ -71,8 +92,8 @@ export default class Welcome extends Component{
 
                                                 :
                                                 <>
-                                                    <Button onClick={this.toggleAuthenticationModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
-                                                    <Button className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
+                                                    <Button onClick={this.toggleRegisterModal} variant="outline-light" className="rounded-0 py-1 px-3">Sign up</Button>
+                                                    <Button onClick={this.toggleAuthenticationModal} className="btn btn-link text-decoration-none text-light rounded-0 fakaferry mr-2 py-1 px-3">Sign in</Button>
                                                 </>
                                             }
                                         </Navbar.Brand>

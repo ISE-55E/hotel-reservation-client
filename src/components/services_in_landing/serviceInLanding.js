@@ -59,7 +59,7 @@ export default class ServiceInLanding extends Component {
 
     render() {
         return (
-            <div className="serviceInLanding">
+            <div className="serviceInLanding mt-3">
                 <Swiper
                     modules={[Navigation]}
                     navigation
@@ -92,17 +92,16 @@ export default class ServiceInLanding extends Component {
                     }
                     onSlideChange={
                         (swiper) => {
-                            console.log(swiper.activeIndex);
                             this.changeActiveItem(swiper.activeIndex);
                         }
                     }
                 >
                     {this.renderItems()}
                 </Swiper>
-                <div className="under-slide pt-5 d-flex flex-column justify-content-center align-items-center">
+                <div className="under-slide d-flex flex-column justify-content-start align-items-center">
                     <h1 className="under-title">{this.state.activeItem.name ? this.state.activeItem.name : "Empty"}</h1>
                     <h5 className="under-price">{this.state.activeItem.price ? this.state.activeItem.price : "Empty"} $</h5>
-                    <p className="under-info">{this.state.activeItem.info ? this.state.activeItem.info : "Empty"}</p>
+                    <p className="under-info text-center">{this.state.activeItem.info ? this.state.activeItem.info : "Empty"}</p>
                     <Link to="/service" className="bottom-link">Show More</Link>
                 </div>
             </div>

@@ -112,8 +112,8 @@ export default class RoomsInLanding extends Component {
     renderItems = () => {
         const items = this.state.items;
 
-        return items.map((item, index) => (
-            <SwiperSlide virtualIndex={index} key={item.id} className="justify-content-start align-items-start bg-transparent slide-padding">
+        return items.map((item) => (
+            <SwiperSlide key={item.id} className="justify-content-start align-items-start bg-transparent slide-padding">
                 <div className="room-image shadow">
                     <Image
                         src={item.image1}
@@ -131,11 +131,13 @@ export default class RoomsInLanding extends Component {
                         </p>
                         <p className="mx">Price: ${item.price}</p>
                     </div>
-                    <Button
-                        variant="btn btn-size text-light d-flex justify-content-center align-items-center rounded-0 button-color"
-                    >
-                        Book Now
-                    </Button>
+                    <Link to="/rooms" style={{textDecoration: "none"}}>
+                        <Button
+                            variant="btn btn-size text-light d-flex justify-content-center align-items-center rounded-0 button-color"
+                        >
+                            Book Now
+                        </Button>
+                    </Link>
                 </div>
             </SwiperSlide>
         ))
@@ -152,6 +154,7 @@ export default class RoomsInLanding extends Component {
                 ) : null}
                 <Swiper
                     virtual
+                    loop={true}
                     modules={[Navigation, Virtual]}
                     breakpoints={{
                         1700: {
@@ -177,8 +180,6 @@ export default class RoomsInLanding extends Component {
                     spaceBetween={200}
                     slidesPerView={2}
                     navigation
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
                 >
                     {this.renderItems()}
                 </Swiper>

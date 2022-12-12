@@ -1,35 +1,19 @@
 import {Component} from "react";
 import './eventsInLanding.css';
-import {Swiper, SwiperSlide} from "swiper/react";
 import server from "../../index";
+import {Swiper, SwiperSlide} from "swiper/react";
+import { EffectFade, Navigation, Pagination } from "swiper";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default class EventsInLanding extends Component {
     constructor(props) {
         super(props);
         this.state = {
             items: [],
-            categoryList: [],
-            typeRoomList: [],
-            slides: [],
-            showImageModal: false,
-            image: null,
-            sort: {
-                category: '',
-                type_room: '',
-                floor: '',
-                air_conditioner: '',
-                kitchen: '',
-                hair_dryer: '',
-                iron: '',
-                wifi: '',
-                TV: '',
-                busy: '',
-                single_beds: '',
-                double_beds: ''
-            },
-            search: {
-                name: ''
-            }
         }
     }
 
@@ -38,7 +22,7 @@ export default class EventsInLanding extends Component {
     }
 
     refreshList = () => {
-        fetch(`${server}apps/room/list?search=${this.state.search.name}&category=${this.state.sort.category}&type_room=${this.state.sort.type_room}&floor=${this.state.sort.floor}&air_conditioner=${this.state.sort.air_conditioner}&kitchen=${this.state.sort.kitchen}&hair_dryer=${this.state.sort.hair_dryer}&iron=${this.state.sort.iron}&wifi=${this.state.sort.wifi}&TV=${this.state.sort.TV}&busy=${this.state.sort.busy}&single_beds=${this.state.sort.single_beds}&double_beds=${this.state.sort.double_beds}`)
+        fetch(`${server}apps/event/list/`)
             .then(res => res.json())
             .then(data => {
                 this.setState({items: data});
@@ -48,25 +32,50 @@ export default class EventsInLanding extends Component {
             })
     };
 
+    dateLocal(datetime) {
+        const dt = new Date(datetime);
+        dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
+        return dt.toISOString().slice(0, 10);
+    }
+
+    timeLocal(datetime) {
+        const dt = new Date(datetime);
+        dt.setMinutes(dt.getMinutes() - dt.getTimezoneOffset());
+        return dt.toISOString().slice(11, 16);
+    }
+
+    renderItems = () => {
+        const items = this.state.items;
+
+        return items.map((item) => (
+            <SwiperSlide className="swiper-element" key={item.id}>
+                <img src={item.image} alt=".png" />
+                <div className="event-text p-2 d-flex flex-column justify-content-center align-items-center">
+                    <h2>{item.name}</h2>
+                    <h4>{item.where}</h4>
+                    <h4>{this.dateLocal(item.when)} {this.timeLocal(item.when)}</h4>
+                    <p>{item.info}</p>
+                </div>
+            </SwiperSlide>
+        ))
+    }
+
     render() {
         return (
-            <div className="eventsInLanding">
-                {this.state.items.length > 0 ?
-                    <Swiper
-                        observer = {true}
-                        observerParents={true}
-                        spaceBetween={50}
-                        slidesPerView={3}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
-                    >
-                        {
-                            this.state.items.map(item => {
-                                return <SwiperSlide key={item.id}>{item.name}</SwiperSlide>
-                            })
-                        }
-                    </Swiper> : <h2>No Movies</h2>
-                }
+            <div className="eventsInLanding mt-4 d-flex flex-column justify-content-center align-items-center">
+                <Swiper
+                    spaceBetween={30}
+                    loop={true}
+                    effect={"fade"}
+                    navigation={true}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    modules={[EffectFade, Navigation, Pagination]}
+                    className="mySwiper"
+                >
+                    {this.renderItems()}
+                </Swiper>
             </div>
         );
     }
