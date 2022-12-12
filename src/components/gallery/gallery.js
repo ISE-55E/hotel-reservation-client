@@ -63,7 +63,6 @@ export default class Gallery extends Component {
                                 <img className="w-100 my-2" src="images/event_image.png" alt=".jpg"/>
                             </Row>
                         </Col>
-
                     </Row>
                 </Container>
 
