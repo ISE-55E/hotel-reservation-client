@@ -12,10 +12,10 @@ class FeedbackInLanding extends Component {
     render() {
         return (
                 <Row className="w-50">
-                    <Col className="bg-warning left d-flex justify-content-end" lg={6} sm={12}>
+                    <Col className="left d-flex justify-content-end" lg={6} sm={12}>
                         <img src="/images/Vise.jpg" alt=".jpg"/>
                     </Col>
-                    <Col className="bg-danger p-3" lg={6} sm={12}>
+                    <Col className=" p-3" lg={6} sm={12}>
                         <FloatingLabel controlId="floatingTextarea2" label="Comments">
                             <Form.Control
                                 as="textarea"

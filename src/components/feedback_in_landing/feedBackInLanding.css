@@ -23,12 +23,12 @@
 .btn1:hover{
     transition: 0.7s;
     color: #523724 !important;
-    border: none !important;
+    border: 1px solid #523724 !important;
     background: #ffffff !important;
 }
 .btn2:hover{
     transition: 0.7s;
     color: #523724 !important;
-    border: none !important;
+    border: 1px solid #8A8A8A !important;
     background: #fff !important;
 }
