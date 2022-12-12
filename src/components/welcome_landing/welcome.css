@@ -134,7 +134,6 @@
 
 
 
-
 .welcome_text{
     display: flex;
     flex-direction: column;
@@ -217,8 +216,8 @@
         margin: 1px 0 0 0;
     }
     .welcome_text p{
-        font-size: 35px;
-        height: 30px;
+        font-size: 24px;
+        height: 35px;
 
     }
     .welcome_text h3{
@@ -231,6 +230,26 @@
         height: 10px;
     }
 }
+@media (max-width: 120px){
+    .welcome_text{
+        margin: 1px 0 0 0;
+    }
+    .welcome_text p{
+        font-size: 12px;
+        height: 20px;
+
+    }
+    .welcome_text h3{
+        font-size: 10px;
+        height: 8px;
+
+    }
+    .welcome_text p:first-child{
+        font-size: 12px;
+        height: 10px;
+    }
+}
+
 
 .Bookbtn{
     backdrop-filter: blur(4px);
