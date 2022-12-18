@@ -4,6 +4,7 @@ import AuthenticationModal from "./authenticationModal";
 import './welcome.css';
 import AuthContext from "../../context/AuthContext";
 import RegisterModal from "./registerModal";
+import {Link} from "react-router-dom";
 
 
 export default class Welcome extends Component{
@@ -27,7 +28,7 @@ export default class Welcome extends Component{
     }
 
     // componentDidMount() {
-    //     console.log(this.context)
+    //     let navbar = document.getElementById('navbar-top')
     // }
 
     logOut = () => {
@@ -58,19 +59,21 @@ export default class Welcome extends Component{
                         />
                     ) : null}
                     <Row className="fixed-top w-100 m-0 active_Welcome">
-                        <Navbar variant={"dark"} expand="lg">
+                        <Navbar variant={"dark"} expand="lg" className="navbar-top">
                             <Container>
-                                <Navbar.Brand href="#home">Tashkent 18*C</Navbar.Brand>
+                                <Navbar.Brand href="#home">AMATHINGS</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="fakafaka d-flex align-items-center">
-                                        <Nav.Link href="/">Home</Nav.Link>
-                                        <Nav.Link href="/gallery">Gallery</Nav.Link>
-                                        <Nav.Link href="/about-us">About Us</Nav.Link>
-                                        <Nav.Link href="/"><img src="/images/Logo.png" alt=".png" className="logo"/></Nav.Link>
-                                        <Nav.Link href="/rooms">Rooms</Nav.Link>
-                                        <Nav.Link href="#anvar">Contacts</Nav.Link>
-                                        <Nav.Link href="#link">Services</Nav.Link>
+                                        <Link to="/" className="nav-link">Home</Link>
+                                        <Link to="/about-us" className="nav-link">About Us</Link>
+                                        <Link to="/gallery" className="nav-link">Gallery</Link>
+                                        <Link to="/" className="nav-link">
+                                            <img src="/images/Logo.png" alt=".png" className="logo"/>
+                                        </Link>
+                                        <Link to="/rooms" className="nav-link">Rooms</Link>
+                                        <a className="nav-link" href="#footer">Contacts</a>
+                                        <a className="nav-link" href="#services">Services</a>
                                     </Nav>
                                         <Navbar.Brand className={"BtnNav d-flex justify-content-center"}>
                                             {this.context.user ?

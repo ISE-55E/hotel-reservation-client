@@ -3,9 +3,15 @@
     background-color: white !important;
 
 }
-.active_Welcome{
+/*.active_Welcome{*/
+/*    backdrop-filter: blur(30px);*/
+/*}*/
+
+.navbar-top {
+    background-color: rgba(75, 50, 33, 0.47) !important;
     backdrop-filter: blur(30px);
 }
+
 .logo {
     width: 75px;
 }
@@ -252,7 +258,12 @@
 
 
 .Bookbtn{
-    backdrop-filter: blur(4px);
     font-size: 30px;
     width: 170px !important;
+}
+
+@media all and (max-width: 992px){
+    .BtnNav {
+        width: 100% !important;
+    }
 }

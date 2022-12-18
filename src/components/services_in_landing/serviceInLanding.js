@@ -59,7 +59,7 @@ export default class ServiceInLanding extends Component {
 
     render() {
         return (
-            <div className="serviceInLanding mt-3">
+            <div className="serviceInLanding mt-3" id="services">
                 <Swiper
                     modules={[Navigation]}
                     navigation
