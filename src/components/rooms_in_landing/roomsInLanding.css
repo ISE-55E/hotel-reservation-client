@@ -78,6 +78,10 @@
     color: #523724;
 }
 
+.bool-icon {
+    width: 25px !important;
+}
+
 @media all and (max-width: 1800px){
     .room-info {
         width: 50%;
