@@ -11,7 +11,7 @@ function FeedBackDiv(props) {
 class FeedbackInLanding extends Component {
     render() {
         return (
-                <Row className="w-50">
+                <Row className="FeedbackPart">
                     <Col className="left d-flex justify-content-end" lg={6} sm={12}>
                         <img src="/images/Vise.jpg" alt=".jpg"/>
                     </Col>

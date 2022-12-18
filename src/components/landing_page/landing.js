@@ -8,14 +8,14 @@ import Footer from "../footer/footer";
 import FoodInLanding from "../foods_in_landing/foodInLanding";
 import FeedbackInLanding from "../feedback_in_landing/feedbackInLanding";
 
-export default class Landing extends Component{
+export default class Landing extends Component {
     render() {
         return (
             <div className="d-flex flex-column align-items-center">
                 {/*<Header />*/}
-                <Welcome />
-                <RoomsInLanding />
-                <FeedbackInLanding />
+                <Welcome/>
+                <RoomsInLanding/>
+                <FeedbackInLanding/>
 
                 <br/>
                 <div className="w-100 pt-5 pb-3 d-flex flex-column justify-content-center">
@@ -23,16 +23,16 @@ export default class Landing extends Component{
                     <font className="line-text mx-5 px-5">Services</font>
                 </div>
 
-                <ServiceInLanding />
+                <ServiceInLanding/>
 
                 <br/>
                 <div className="row-title w-100 pt-5 pb-3 d-flex flex-column justify-content-center">
                     <div className="w-100 line"/>
-                    <font className="line-text mx-5 px-5">Delicious</font>
+                    <font className="line-text mx-5 px-5">Events</font>
                 </div>
 
-                <FoodInLanding />
-                <EventsInLanding />
+                {/*<FoodInLanding />*/}
+                <EventsInLanding/>
 
                 <div className="w-100 p-5 d-flex flex-column justify-content-between align-items-center">
                     <h1 className="our-location-title text-brown">Our location</h1>
@@ -44,7 +44,7 @@ export default class Landing extends Component{
                     />
                 </div>
 
-                <Footer />
+                <Footer/>
             </div>
         );
     }

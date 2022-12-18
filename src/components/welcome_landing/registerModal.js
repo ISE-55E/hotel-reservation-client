@@ -33,14 +33,20 @@ class RegisterModal extends Component {
                     <Row className="w-100 m-0">
                         <Col sm={12} lg={6}>
                             <Form className={"p-0 m-4"} onSubmit={this.closeModal}>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>First Name</Form.Label>
-                                    <Form.Control name="first_name" type="text" placeholder="First Name" />
-                                </Form.Group>
-                                <Form.Group className="mb-3">
-                                    <Form.Label>Last Name</Form.Label>
-                                    <Form.Control name="last_name" type="text" placeholder="Last Name" />
-                                </Form.Group>
+                                <Row>
+                                    <Col>
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>First Name</Form.Label>
+                                            <Form.Control name="first_name" type="text" placeholder="First Name" />
+                                        </Form.Group>
+                                    </Col>
+                                    <Col>
+                                        <Form.Group className="mb-3">
+                                            <Form.Label>Last Name</Form.Label>
+                                            <Form.Control name="last_name" type="text" placeholder="Last Name" />
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
                                 <Form.Group className="mb-3">
                                     <Form.Label>Email</Form.Label>
                                     <Form.Control name="email" type="text" placeholder="Email" />

@@ -198,32 +198,32 @@ export default class Rooms extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <Row className="d-flex justify-content-center align-items-center w-75">
-                    <Col>
-                        <Accordion defaultActiveKey={['0']}>
-                            <Accordion.Item eventKey="0">
-                                <Accordion.Header className="d-flex justify-content-evenly">
-                                    <Form.Control
-                                        name="name"
-                                        className="w-75 rounded-0"
-                                        type="text"
-                                        placeholder="Search"
-                                        onChange={this.handleChangeSearch}
-                                    />
-                                </Accordion.Header>
-                                <Accordion.Body>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    culpa qui officia deserunt mollit anim id est laborum.
-                                </Accordion.Body>
-                            </Accordion.Item>
-                        </Accordion>
-                    </Col>
-                </Row>
+                {/*<Row className="d-flex justify-content-center align-items-center w-75">*/}
+                {/*    <Col>*/}
+                {/*        <Accordion defaultActiveKey={['0']}>*/}
+                {/*            <Accordion.Item eventKey="0">*/}
+                {/*                <Accordion.Header className="d-flex justify-content-evenly">*/}
+                {/*                    <Form.Control*/}
+                {/*                        name="name"*/}
+                {/*                        className="w-75 rounded-0"*/}
+                {/*                        type="text"*/}
+                {/*                        placeholder="Search"*/}
+                {/*                        onChange={this.handleChangeSearch}*/}
+                {/*                    />*/}
+                {/*                </Accordion.Header>*/}
+                {/*                <Accordion.Body>*/}
+                {/*                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do*/}
+                {/*                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad*/}
+                {/*                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut*/}
+                {/*                    aliquip ex ea commodo consequat. Duis aute irure dolor in*/}
+                {/*                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla*/}
+                {/*                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in*/}
+                {/*                    culpa qui officia deserunt mollit anim id est laborum.*/}
+                {/*                </Accordion.Body>*/}
+                {/*            </Accordion.Item>*/}
+                {/*        </Accordion>*/}
+                {/*    </Col>*/}
+                {/*</Row>*/}
                 {/*<Row className="p-2 text-dark back-light">*/}
                 {/*    <Col className="d-flex justify-content-start align-items-center">*/}
                 {/*        <Link to="/">*/}
@@ -251,251 +251,251 @@ export default class Rooms extends Component {
                 {/*        </Link>*/}
                 {/*    </Col>*/}
                 {/*</Row>*/}
-                {/*<Row>*/}
-                {/*    <Col xs={7} className="p-3">*/}
-                {/*        <Container className="back-light p-3 px-4">*/}
-                {/*            {this.renderItems()}*/}
-                {/*        </Container>*/}
-                {/*    </Col>*/}
-                {/*    <Col xs={5}>*/}
-                {/*        <Row className="back-light p-2 d-flex justify-content-center mb-3">*/}
-                {/*            <Form.Control*/}
-                {/*                name="name"*/}
-                {/*                className="w-75 rounded-0"*/}
-                {/*                type="text"*/}
-                {/*                placeholder="Search"*/}
-                {/*                onChange={this.handleChangeSearch}*/}
-                {/*            />*/}
-                {/*        </Row>*/}
-                {/*        <Row className="back-light p-2 d-flex justify-content-center py-5">*/}
-                {/*            <Row className="mb-4">*/}
-                {/*                <Button variant="outline-primary rounded-0" className="button-color" onClick={this.changeSortToDefault}>*/}
-                {/*                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"*/}
-                {/*                         className="bi bi-arrow-clockwise" viewBox="0 0 20 20">*/}
-                {/*                        <path fill-rule="evenodd"*/}
-                {/*                              d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>*/}
-                {/*                        <path*/}
-                {/*                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>*/}
-                {/*                    </svg>*/}
-                {/*                </Button>*/}
-                {/*            </Row>*/}
-                {/*            <Row className="mb-4">*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Category</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="category"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.category}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">Any</option>*/}
-                {/*                            {this.categoryListOptions()}*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Room Type</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="type_room"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.type_room}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">Any</option>*/}
-                {/*                            {this.typeRoomListOptions()}*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*            </Row>*/}
-                {/*            <Row className="mb-4">*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Single Beds</Form.Label>*/}
-                {/*                        <Form.Control*/}
-                {/*                            name="single_beds"*/}
-                {/*                            type="number"*/}
-                {/*                            placeholder="Single Beds"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.single_beds}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        />*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Double Beds</Form.Label>*/}
-                {/*                        <Form.Control*/}
-                {/*                            name="double_beds"*/}
-                {/*                            type="number"*/}
-                {/*                            placeholder="Double Beds"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.double_beds}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        />*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Floor</Form.Label>*/}
-                {/*                        <Form.Control*/}
-                {/*                            name="floor"*/}
-                {/*                            type="number"*/}
-                {/*                            placeholder="Floor"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.floor}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        />*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Busy</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="busy"*/}
-                {/*                            value={this.state.sort.busy}*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">Any</option>*/}
-                {/*                            <option value="1">Busy</option>*/}
-                {/*                            <option value="0">Not Busy</option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*            </Row>*/}
-                {/*            <Row className="">*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Conditioner</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="air_conditioner"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.air_conditioner}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">*/}
-                {/*                                ---*/}
-                {/*                            </option>*/}
-                {/*                            <option value="1">*/}
-                {/*                                ➕*/}
-                {/*                            </option>*/}
-                {/*                            <option value="0">*/}
-                {/*                                ➖*/}
-                {/*                            </option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Kitchen</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="kitchen"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.kitchen}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">*/}
-                {/*                                ---*/}
-                {/*                            </option>*/}
-                {/*                            <option value="1">*/}
-                {/*                                ➕*/}
-                {/*                            </option>*/}
-                {/*                            <option value="0">*/}
-                {/*                                ➖*/}
-                {/*                            </option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Hair Dryer</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="hair_dryer"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.hair_dryer}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">*/}
-                {/*                                ---*/}
-                {/*                            </option>*/}
-                {/*                            <option value="1">*/}
-                {/*                                ➕*/}
-                {/*                            </option>*/}
-                {/*                            <option value="0">*/}
-                {/*                                ➖*/}
-                {/*                            </option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">Iron</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="iron"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.iron}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">*/}
-                {/*                                ---*/}
-                {/*                            </option>*/}
-                {/*                            <option value="1">*/}
-                {/*                                ➕*/}
-                {/*                            </option>*/}
-                {/*                            <option value="0">*/}
-                {/*                                ➖*/}
-                {/*                            </option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">WiFi</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="wifi"*/}
-                {/*                            className="rounded-0"*/}
-                {/*                            value={this.state.sort.wifi}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">*/}
-                {/*                                ---*/}
-                {/*                            </option>*/}
-                {/*                            <option value="1">*/}
-                {/*                                ➕*/}
-                {/*                            </option>*/}
-                {/*                            <option value="0">*/}
-                {/*                                ➖*/}
-                {/*                            </option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*                <Col>*/}
-                {/*                    <Form.Group>*/}
-                {/*                        <Form.Label className="text-dark">TV</Form.Label>*/}
-                {/*                        <Form.Select*/}
-                {/*                            name="TV"*/}
-                {/*                                className="rounded-0"*/}
-                {/*                            value={this.state.sort.TV}*/}
-                {/*                            onChange={this.handleChangeSort}*/}
-                {/*                        >*/}
-                {/*                            <option value="">*/}
-                {/*                                ---*/}
-                {/*                            </option>*/}
-                {/*                            <option value="1">*/}
-                {/*                                ➕*/}
-                {/*                            </option>*/}
-                {/*                            <option value="0">*/}
-                {/*                                ➖*/}
-                {/*                            </option>*/}
-                {/*                        </Form.Select>*/}
-                {/*                    </Form.Group>*/}
-                {/*                </Col>*/}
-                {/*            </Row>*/}
-                {/*        </Row>*/}
-                {/*    </Col>*/}
-                {/*</Row>*/}
+                <Row>
+                    <Col xs={7} className="p-3">
+                        <Container className="back-light p-3 px-4">
+                            {this.renderItems()}
+                        </Container>
+                    </Col>
+                    <Col xs={5}>
+                        <Row className="back-light p-2 d-flex justify-content-center mb-3">
+                            <Form.Control
+                                name="name"
+                                className="w-75 rounded-0"
+                                type="text"
+                                placeholder="Search"
+                                onChange={this.handleChangeSearch}
+                            />
+                        </Row>
+                        <Row className="back-light p-2 d-flex justify-content-center py-5">
+                            <Row className="mb-4">
+                                <Button variant="outline-primary rounded-0" className="button-color" onClick={this.changeSortToDefault}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                         className="bi bi-arrow-clockwise" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"/>
+                                        <path
+                                            d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"/>
+                                    </svg>
+                                </Button>
+                            </Row>
+                            <Row className="mb-4">
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Category</Form.Label>
+                                        <Form.Select
+                                            name="category"
+                                            className="rounded-0"
+                                            value={this.state.sort.category}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">Any</option>
+                                            {this.categoryListOptions()}
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Room Type</Form.Label>
+                                        <Form.Select
+                                            name="type_room"
+                                            className="rounded-0"
+                                            value={this.state.sort.type_room}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">Any</option>
+                                            {this.typeRoomListOptions()}
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row className="mb-4">
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Single Beds</Form.Label>
+                                        <Form.Control
+                                            name="single_beds"
+                                            type="number"
+                                            placeholder="Single Beds"
+                                            className="rounded-0"
+                                            value={this.state.sort.single_beds}
+                                            onChange={this.handleChangeSort}
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Double Beds</Form.Label>
+                                        <Form.Control
+                                            name="double_beds"
+                                            type="number"
+                                            placeholder="Double Beds"
+                                            className="rounded-0"
+                                            value={this.state.sort.double_beds}
+                                            onChange={this.handleChangeSort}
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Floor</Form.Label>
+                                        <Form.Control
+                                            name="floor"
+                                            type="number"
+                                            placeholder="Floor"
+                                            className="rounded-0"
+                                            value={this.state.sort.floor}
+                                            onChange={this.handleChangeSort}
+                                        />
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Busy</Form.Label>
+                                        <Form.Select
+                                            name="busy"
+                                            value={this.state.sort.busy}
+                                            className="rounded-0"
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">Any</option>
+                                            <option value="1">Busy</option>
+                                            <option value="0">Not Busy</option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                            <Row className="">
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Conditioner</Form.Label>
+                                        <Form.Select
+                                            name="air_conditioner"
+                                            className="rounded-0"
+                                            value={this.state.sort.air_conditioner}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">
+                                                ---
+                                            </option>
+                                            <option value="1">
+                                                ➕
+                                            </option>
+                                            <option value="0">
+                                                ➖
+                                            </option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Kitchen</Form.Label>
+                                        <Form.Select
+                                            name="kitchen"
+                                            className="rounded-0"
+                                            value={this.state.sort.kitchen}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">
+                                                ---
+                                            </option>
+                                            <option value="1">
+                                                ➕
+                                            </option>
+                                            <option value="0">
+                                                ➖
+                                            </option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Hair Dryer</Form.Label>
+                                        <Form.Select
+                                            name="hair_dryer"
+                                            className="rounded-0"
+                                            value={this.state.sort.hair_dryer}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">
+                                                ---
+                                            </option>
+                                            <option value="1">
+                                                ➕
+                                            </option>
+                                            <option value="0">
+                                                ➖
+                                            </option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">Iron</Form.Label>
+                                        <Form.Select
+                                            name="iron"
+                                            className="rounded-0"
+                                            value={this.state.sort.iron}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">
+                                                ---
+                                            </option>
+                                            <option value="1">
+                                                ➕
+                                            </option>
+                                            <option value="0">
+                                                ➖
+                                            </option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">WiFi</Form.Label>
+                                        <Form.Select
+                                            name="wifi"
+                                            className="rounded-0"
+                                            value={this.state.sort.wifi}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">
+                                                ---
+                                            </option>
+                                            <option value="1">
+                                                ➕
+                                            </option>
+                                            <option value="0">
+                                                ➖
+                                            </option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                                <Col>
+                                    <Form.Group>
+                                        <Form.Label className="text-dark">TV</Form.Label>
+                                        <Form.Select
+                                            name="TV"
+                                                className="rounded-0"
+                                            value={this.state.sort.TV}
+                                            onChange={this.handleChangeSort}
+                                        >
+                                            <option value="">
+                                                ---
+                                            </option>
+                                            <option value="1">
+                                                ➕
+                                            </option>
+                                            <option value="0">
+                                                ➖
+                                            </option>
+                                        </Form.Select>
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+                        </Row>
+                    </Col>
+                </Row>
             </Container>
         );
     }
